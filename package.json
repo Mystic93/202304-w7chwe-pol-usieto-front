@@ -1,5 +1,5 @@
 {
-  "name": "coders-template",
+  "name": "202304-w7chwe-pol-usieto-front",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +8,10 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:dev": "vitest"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
