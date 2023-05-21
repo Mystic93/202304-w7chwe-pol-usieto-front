@@ -11,9 +11,15 @@ const LoginFormStyled = styled.form`
     padding: 5px;
   }
 
+  .loginform-title {
+    text-decoration: underline;
+  }
+
   .loginform-input {
-    padding: 5px;
+    padding: 10px;
     border-radius: 10%;
+    margin-bottom: 10px;
+    background-color: aliceblue;
   }
 
   .loginform-button {
