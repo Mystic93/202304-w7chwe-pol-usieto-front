@@ -13,6 +13,14 @@ const LoginFormStyled = styled.form`
 
   .loginform-input {
     padding: 5px;
+    border-radius: 10%;
+  }
+
+  .loginform-button {
+    padding: 8px;
+    cursor: pointer;
+    background-color: aliceblue;
+    border-radius: 10%;
   }
 `;
 export default LoginFormStyled;

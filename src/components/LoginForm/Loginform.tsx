@@ -33,7 +33,8 @@ const LoginForm = ({ submitForm }: LoginFormProps): JSX.Element => {
   };
 
   return (
-    <LoginFormStyled onSubmit={handleSubmit}>
+    <LoginFormStyled className="loginform" onSubmit={handleSubmit}>
+      <h2 className="loginform-title">Sign in</h2>
       <label className="loginform-label" htmlFor="username">
         {" "}
         Username:
@@ -56,7 +57,9 @@ const LoginForm = ({ submitForm }: LoginFormProps): JSX.Element => {
         onChange={onChangeUserData}
         value={userState.password}
       />
-      <button disabled={!isReady}>Login</button>
+      <button className="loginform-button" disabled={!isReady}>
+        Login
+      </button>
     </LoginFormStyled>
   );
 };
