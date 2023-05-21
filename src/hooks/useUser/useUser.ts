@@ -11,14 +11,18 @@ const useUser = () => {
   const getUserToken = async (
     userCredentials: UserCredentials
   ): Promise<string> => {
-    const {
-      data: { token },
-    } = await axios.post<{ token: string }>(
-      `${apiUrl}/user/login`,
-      userCredentials
-    );
+    try {
+      const {
+        data: { token },
+      } = await axios.post<{ token: string }>(
+        `${apiUrl}/user/login`,
+        userCredentials
+      );
 
-    return token;
+      return token;
+    } catch (error) {
+      throw new Error("Wrong credentials");
+    }
   };
 
   return {
