@@ -13,6 +13,7 @@ const LoginFormStyled = styled.form`
 
   .loginform-title {
     text-decoration: underline;
+    margin-bottom: 20px;
   }
 
   .loginform-input {
