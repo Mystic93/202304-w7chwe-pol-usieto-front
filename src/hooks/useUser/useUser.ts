@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useCallback } from "react";
 
 interface UserCredentials {
   username: string;
@@ -8,22 +9,23 @@ interface UserCredentials {
 const apiUrl = import.meta.env.VITE_API_URL;
 
 const useUser = () => {
-  const getUserToken = async (
-    userCredentials: UserCredentials
-  ): Promise<string> => {
-    try {
-      const {
-        data: { token },
-      } = await axios.post<{ token: string }>(
-        `${apiUrl}/user/login`,
-        userCredentials
-      );
+  const getUserToken = useCallback(
+    async (userCredentials: UserCredentials): Promise<string> => {
+      try {
+        const {
+          data: { token },
+        } = await axios.post<{ token: string }>(
+          `${apiUrl}/user/login`,
+          userCredentials
+        );
 
-      return token;
-    } catch (error) {
-      throw new Error("Wrong credentials");
-    }
-  };
+        return token;
+      } catch (error) {
+        throw new Error("Wrong credentials");
+      }
+    },
+    []
+  );
 
   return {
     getUserToken,
