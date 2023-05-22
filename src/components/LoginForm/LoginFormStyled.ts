@@ -6,27 +6,30 @@ const LoginFormStyled = styled.form`
   align-items: center;
   gap: 5px;
   padding: 10px;
+  background-color: black;
+  border-radius: 10%;
 
   .loginform-label {
     padding: 5px;
+    color: orange;
   }
 
   .loginform-title {
-    text-decoration: underline;
-    margin-bottom: 20px;
+    margin: 20px;
+    color: orange;
   }
 
   .loginform-input {
     padding: 10px;
     border-radius: 10%;
-    margin-bottom: 10px;
-    background-color: aliceblue;
+    margin: 10px;
+    background-color: aquamarine;
   }
 
   .loginform-button {
     padding: 8px;
-    cursor: pointer;
-    background-color: aliceblue;
+    margin: 10px;
+    background-color: aquamarine;
     border-radius: 10%;
   }
 `;
