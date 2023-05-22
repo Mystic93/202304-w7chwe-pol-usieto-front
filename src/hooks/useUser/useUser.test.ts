@@ -1,5 +1,5 @@
 import { renderHook } from "@testing-library/react";
-import tokenMock from "../../mocks/tokenMock";
+import { tokenMock } from "../../mocks/tokenMock";
 import { UserCredentials } from "../../store/user/types";
 import useUser from "./useUser";
 

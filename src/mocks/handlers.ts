@@ -1,5 +1,5 @@
 import { rest } from "msw";
-import tokenMock from "./tokenMock";
+import { tokenMock } from "./tokenMock";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
