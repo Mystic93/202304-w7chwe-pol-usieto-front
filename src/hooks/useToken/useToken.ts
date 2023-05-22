@@ -10,7 +10,7 @@ const useToken = () => {
     };
     return userData;
   };
-  return getTokenData;
+  return { getTokenData };
 };
 
 export default useToken;
